@@ -1,0 +1,73 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "FinancesContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "TesteEFToolPower",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Carteira]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FormaPagamento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Investimento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Pagar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Poupanca]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PrevidenciaPrivada]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Receber]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Relatorio]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RendaVariavel]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Usuario]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "5f583b11444d.finances",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}
