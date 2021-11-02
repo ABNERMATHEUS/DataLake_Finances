@@ -16,6 +16,9 @@ namespace TesteEFToolPower.Models
         public string Categoria { get; set; }
         public int IdCarteira { get; set; }
 
+        //FAKE
+        public int Id_sistema { get; set; }
+
         public virtual Carteira IdCarteiraNavigation { get; set; }
     }
 }

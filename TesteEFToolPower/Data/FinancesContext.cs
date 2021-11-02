@@ -35,7 +35,7 @@ namespace TesteEFToolPower.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=finances;Persist Security Info=True;User ID=sa;Password=R@@trootroot");
+                optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=finances_fake;Persist Security Info=True;User ID=sa;Password=R@@trootroot");
             }
         }
 
@@ -222,6 +222,10 @@ namespace TesteEFToolPower.Data
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario);
+                entity.Property(x => x.Data_nascimento).IsRequired();
+                entity.Property(x => x.Image).IsRequired();
+                entity.Property(x => x.Telefone).IsRequired();
+
 
                 entity.Property(e => e.Email)
                     .IsRequired()
