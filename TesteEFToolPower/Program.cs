@@ -43,10 +43,7 @@ namespace TesteEFToolPower
                 Nome = faker.Person.FirstName,
                 Email = faker.Person.Email,
                 Senha = faker.Person.UserName,
-                Sobrenome = faker.Person.LastName,
-                Data_nascimento = faker.Person.DateOfBirth,
-                Telefone = faker.Person.Phone,
-                Image = faker.Person.Avatar,
+                Sobrenome = faker.Person.LastName
             };
             financesContext.Usuario.Add(usuario);
             financesContext.SaveChanges();
@@ -76,8 +73,7 @@ namespace TesteEFToolPower
                     Valor = new Random().Next(2000, 8000),
                     Data = DateTime.Now.AddDays(2),
                     Categoria = descricao_categoria,
-                    IdCarteira = id_carteira,
-                    Id_sistema  = random.Next(0,100) //Fake
+                    IdCarteira = id_carteira
                 };
                 financesContext.Receber.Add(receber);
                 financesContext.SaveChanges();
@@ -95,7 +91,7 @@ namespace TesteEFToolPower
                     id_forma_pagamento = financesContext.FormaPagamento.Where(x => x.Nome == nome_foma_pagamento).FirstOrDefault();
                 }
 
-                
+
                 #endregion
 
 
@@ -158,7 +154,7 @@ namespace TesteEFToolPower
             {
                 DataAplicacao = DateTime.Now,
                 IdInvestimento = id_investimento,
-                Papel = ((EPapel)random.Next(0, 4)).ToString(),
+                Papel = ((EPapel)random.Next(0,4)).ToString(),
                 ValorAplicado = random.Next(25, 35),
                 Unidades = random.Next(30,7000),
             };

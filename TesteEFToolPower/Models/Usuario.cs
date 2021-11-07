@@ -20,15 +20,7 @@ namespace TesteEFToolPower.Models
         public string Email { get; set; }
         public string Senha { get; set; }
 
-        public DateTime Data_nascimento { get; set; }
-
-        public string Telefone { get; set; }
-
-        public string Image { get; set; }
-
-        //Data nascimento, 
         public virtual ICollection<Carteira> Carteira { get; set; }
         public virtual ICollection<Relatorio> Relatorio { get; set; }
-        
     }
 }
