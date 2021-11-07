@@ -15,20 +15,28 @@ namespace TesteEFToolPower
         {
             try
             {
-                Console.WriteLine("Começou...");
-                for(int i = 0; i < 30; i++)
-                {
-                    PopularBancoComUmUsuario();
-                    Console.WriteLine($"{i+1} Registro inserido com sucesso.");
-                }
-               
-                Console.WriteLine("Finalizado.");
-            }catch(Exception e)
+                poupularbanco();
+            }
+            catch(Exception e)
             {
                 Console.WriteLine(e.Message);
+                poupularbanco();
             }
             
 
+        }
+
+
+        static void poupularbanco()
+        {
+            Console.WriteLine("Começou...");
+            for (int i = 0; i < 1000; i++)
+            {
+                PopularBancoComUmUsuario();
+                Console.WriteLine($"{i + 1} Registro inserido com sucesso.");
+            }
+
+            Console.WriteLine("Finalizado.");
         }
 
         public static void PopularBancoComUmUsuario()
@@ -63,7 +71,7 @@ namespace TesteEFToolPower
 
 
             //5 registros
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 30; i++)
             {
                 #region CRIANDO RECEBER
                 var descricao_categoria = ((EReceber)random.Next(0, 4)).ToString();
@@ -130,7 +138,7 @@ namespace TesteEFToolPower
             Poupanca poupanca = new Poupanca
             {
                 IdInvestimento = id_investimento,
-                Nome = faker.Random.Words(),
+                Nome = $"Poupança do ${usuario.Nome} ${usuario.Sobrenome}",
 
             };
             financesContext.Poupanca.Add(poupanca);
